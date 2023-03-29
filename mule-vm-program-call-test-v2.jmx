@@ -32,13 +32,13 @@
             <collectionProp name="Arguments.arguments">
               <elementProp name="" elementType="HTTPArgument">
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                <stringProp name="Argument.value">{"CustomerNo":20230405,"CustomerName":"New Cust - 20230405","Order":[{"OrderID":11934545,"OrderAmount":7783.97,"OrderDate":"03-23-2023","OrderStatus":"Activated","DeliveryDate":"03-23-2023","noOfItems":2,"linesIn":[{"OrderLineNumber":"1234","OrderLineItem":"ABC","Quantity":87,"UnitPrice":7687.78},{"OrderLineNumber":"5678","OrderLineItem":"DEF","Quantity":75,"UnitPrice":787.95}]}]}</stringProp>
+                <stringProp name="Argument.value">{&quot;CustomerNo&quot;:20230405,&quot;CustomerName&quot;:&quot;New Cust - 20230405&quot;,&quot;Order&quot;:[{&quot;OrderID&quot;:11934545,&quot;OrderAmount&quot;:7783.97,&quot;OrderDate&quot;:&quot;03-23-2023&quot;,&quot;OrderStatus&quot;:&quot;Activated&quot;,&quot;DeliveryDate&quot;:&quot;03-23-2023&quot;,&quot;noOfItems&quot;:2,&quot;linesIn&quot;:[{&quot;OrderLineNumber&quot;:&quot;1234&quot;,&quot;OrderLineItem&quot;:&quot;ABC&quot;,&quot;Quantity&quot;:87,&quot;UnitPrice&quot;:7687.78},{&quot;OrderLineNumber&quot;:&quot;5678&quot;,&quot;OrderLineItem&quot;:&quot;DEF&quot;,&quot;Quantity&quot;:75,&quot;UnitPrice&quot;:787.95}]}]}</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
               </elementProp>
             </collectionProp>
           </elementProp>
           <stringProp name="HTTPSampler.domain">0.0.0.0</stringProp>
-          <stringProp name="HTTPSampler.port">8081</stringProp>
+          <stringProp name="HTTPSampler.port">8083</stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
           <stringProp name="HTTPSampler.path">/api/orders</stringProp>
@@ -51,6 +51,15 @@
           <stringProp name="HTTPSampler.connect_timeout"></stringProp>
           <stringProp name="HTTPSampler.response_timeout"></stringProp>
         </HTTPSamplerProxy>
+        <hashTree/>
+        <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+          <collectionProp name="HeaderManager.headers">
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">Content-Type</stringProp>
+              <stringProp name="Header.value">application/json</stringProp>
+            </elementProp>
+          </collectionProp>
+        </HeaderManager>
         <hashTree/>
         <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
           <collectionProp name="Asserion.test_strings">
@@ -96,7 +105,7 @@
               <connectTime>true</connectTime>
             </value>
           </objProp>
-          <stringProp name="filename">test-resluts/program-call-test-results.xml</stringProp>
+          <stringProp name="filename">test-results/program-call-test-results.xml</stringProp>
         </ResultCollector>
         <hashTree/>
         <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
@@ -133,7 +142,7 @@
               <connectTime>true</connectTime>
             </value>
           </objProp>
-          <stringProp name="filename"></stringProp>
+          <stringProp name="filename">test-results/program-call-test-results.xml</stringProp>
         </ResultCollector>
         <hashTree/>
       </hashTree>
